@@ -19,7 +19,7 @@ module.exports = defineConfig({
 
     "requestTimeout": 2000,
     "defaultCommandTimeout": 10000,
-    //"retries": 2,
+    "retries": 2,
     "pageLoadTimeout": 60000
   },
 });
