@@ -1,5 +1,6 @@
 import checkout from "../pages/checkoutPage";
 
+
 describe('Ecommerce checkout and assertions test', () => {
 
   it('passes', () => {
@@ -8,6 +9,7 @@ describe('Ecommerce checkout and assertions test', () => {
     cy.url().should('eq', 'https://www.konga.com/'); // Assert correct URL
     cy.title().should('include', "Buy Phones, Fashion, Electronics in Nigeria_Konga Online Shopping | Konga Online Shopping"); // Assert the title of the webpage
     cy.wait(5000);
+
 
     const checkoutObj = new checkout();
     const item = 'television'
