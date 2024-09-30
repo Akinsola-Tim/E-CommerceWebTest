@@ -1,4 +1,6 @@
 class checkout {
+
+    //interact with the page elements
     elements = {
         
         visibleSearchBar : () => cy.get('.a9ed8_1Hn0P.c02ba_1SCli').invoke('show'), // Forces the nav to be visible
@@ -14,6 +16,8 @@ class checkout {
         
 
     }
+
+    //methods
 
     makeVisible() {
         this.elements.visibleSearchBar();
