@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-09-30T20:47:03.512Z",
+    "end": "2024-09-30T20:47:23.635Z",
+    "duration": 20123,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9cbb4708-b47b-4614-a3e7-d31da77fdef7",
+      "title": "",
+      "fullFile": "cypress\\e2e\\konga.cy.js",
+      "file": "cypress\\e2e\\konga.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "77ef3bac-a9b8-4cba-91c6-a0be202094f6",
+          "title": "Ecommerce checkout and assertions test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "passes",
+              "fullTitle": "Ecommerce checkout and assertions test passes",
+              "timedOut": null,
+              "duration": 16533,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//visit the ecommerce website\ncy.visit('https://www.konga.com/');\ncy.url().should('eq', 'https://www.konga.com/'); // Assert correct URL\ncy.title().should('include', \"Buy Phones, Fashion, Electronics in Nigeria_Konga Online Shopping | Konga Online Shopping\"); // Assert the title of the webpage\ncy.wait(5000);\nconst checkoutObj = new _checkoutPage.default();\nconst item = 'television';\ncheckoutObj.makeVisible();\ncheckoutObj.enterItemName(item);\ncheckoutObj.clickSearchBtn();\ncy.wait(1000);\ncheckoutObj.resultCheck(); //assert that the search results are visible\ncheckoutObj.leastResult(); //assert that the responses from search are greater than 0\ncheckoutObj.addToCart();\ncheckoutObj.responseMsgCheck(); //assert the response message in the cart\ncheckoutObj.cartQtyCheck(); //assert the number of item in the cart\ncheckoutObj.clickCheckoutBtn();",
+              "err": {},
+              "uuid": "329e824d-ad3e-4ce1-be73-071e717f3f4a",
+              "parentUUID": "77ef3bac-a9b8-4cba-91c6-a0be202094f6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "329e824d-ad3e-4ce1-be73-071e717f3f4a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 16533,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
